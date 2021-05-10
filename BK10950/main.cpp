@@ -7,6 +7,7 @@ int main(void) {
     cin >> n;
 
     for (short i = 0; i < n; i++) {
+        
         cin >> a >> b;
         if (a <= 0 || b >= 10) exit(0);
 
