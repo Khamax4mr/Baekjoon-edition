@@ -60,7 +60,8 @@ def get_json(path, key):
 # path 경로의 소스 코드 경로를 반환합니다.
 # 파일이 존재하지 않으면 None을 반환합니다.
 def get_code_path(path):
-  code_path = f'{path}/code.py'
+  # code_path = f'{path}/code.py'
+  code_path = f'{path}/Main.java'
   if isfile(code_path):
     return code_path
   else:
@@ -94,8 +95,9 @@ def run_test(path, examples):
 
 # path 경로의 파일에서 input을 입력하는 동작을 수행하고 출력문을 반환합니다.
 def run(path, input):
-  p = Popen(['python3', path], stdin=PIPE, stdout=PIPE)
-  return p.communicate(input)[0].decode('utf-8')
+  # p = Popen(['python3', path], stdin=PIPE, stdout=PIPE)
+  p = Popen(['java', path] + input.split(), stdin=PIPE, stdout=PIPE)
+  return p.communicate()[0].decode('utf-8')
 
 # 테스트 실행 결과를 출력합니다.
 def print_result(id, inp, test_out, expected_out):
