@@ -1,0 +1,5 @@
+[
+  {"inp": ["3", "CCP", "CCP", "PPC"], "out": ["3"]},
+  {"inp": ["4", "PPPP", "CYZY", "CCPY", "PPCC"], "out": ["4"]},
+  {"inp": ["5", "YCPZY", "CYZZP", "CCPPP", "YCYZC", "CPPZZ"], "out": ["4"]}
+]
